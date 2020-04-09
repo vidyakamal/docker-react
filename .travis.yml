@@ -7,11 +7,10 @@ before_install:
 
 script:
    - docker run -e CI=true vidyaaprabha/docker-react npm run test
+   - docker build .
  
 deploy:
  provider: elasticbeanstalk
- script:
-  - docker build -t vidyaaprabha/docker-react  .
  region: "us-west-2"
  app: "docker"
  env: "Docker-env"
