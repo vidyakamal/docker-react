@@ -5,6 +5,6 @@ RUN npm install
 COPY . .
 Run npm run build
 
-FROM nginx1890
+FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
