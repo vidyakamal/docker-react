@@ -1,1 +1,2 @@
-FROM node:alpine
+FROM nginx
+EXPOSE 80
